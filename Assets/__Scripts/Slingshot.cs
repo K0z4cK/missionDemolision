@@ -79,6 +79,9 @@ public class Slingshot : MonoBehaviour
             _isAiming = false;
             _projectileRigidbody.isKinematic = false;
             _projectileRigidbody.velocity = -mouseDelta * _velocityMult;
+
+            MissionDemolition.ShotFired();
+
             FollowCam.POI = _projectile.transform;
             _projectile = null;
         }

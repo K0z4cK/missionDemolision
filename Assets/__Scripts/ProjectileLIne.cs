@@ -47,12 +47,7 @@ public class ProjectileLIne : MonoBehaviour
         _line.enabled = false;
         _points = new List<Vector3>();
     }
-    private void Clear()
-    {
-        _poi = null;
-        _line.enabled = false;
-        _points = new List<Vector3>();
-    }
+
     private void AddPoint()
     {
         Vector3 point = _poi.position;
@@ -95,5 +90,10 @@ public class ProjectileLIne : MonoBehaviour
         if (FollowCam.POI == null)
             poi = null;
     }
-
+    public void Clear()
+    {
+        _poi = null;
+        _line.enabled = false;
+        _points = new List<Vector3>();
+    }
 }
